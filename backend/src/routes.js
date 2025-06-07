@@ -1,10 +1,11 @@
 import { Router } from "express";
+import tasksControllers from "./controllers/tasksControllers.js";
 
 const router = Router();
 //importação das rotas
 
 
-router.get("/tasks", (req, res) => res.status(200).send("API funcionando!"));
+router.get("/tasks", (req, res) => tasksControllers.getAll(req, res));
 
 
 
